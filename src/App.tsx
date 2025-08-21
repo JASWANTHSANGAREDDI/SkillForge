@@ -1,32 +1,18 @@
-function App() {
+import React from "react";
+
+function ForceCalculator() {
+  const mass = 10;
+  const acceleration = 2; 
+  const force = mass * acceleration; 
 
   return (
     <div>
-      <Force mass = {3} accleration = {4}/>
-      <Force mass = {5} accleration = {4}/>
-      <Force mass = {2} accleration = {4}/> 
-      <Force  mass  = {40} accleration = {2.5}/>
-      <Force mass = {10} accleration = {2} /> 
-      <Gravity mass = {20} /> 
-  )
-}
-
-const Force = (props) => {
-
-  return (
-    <div>
-      F  =  { props.mass } *{props.accleration} = {props.mass*props.accleration} 
-      
-
+      <h1>F = m × a</h1>
+      <p>Mass: {mass} kg</p>
+      <p>Acceleration: {acceleration} m/s²</p>
+      <p>Force: {force} N</p>
     </div>
-  )
- 
- }  
- const Gravity  = (props) => {
-  return (
-    <div> 
-      G  = {props.mass}* {props.mass}  = {props.G}
-      </div> 
-  )
+  );
 }
-export default App
+
+export default ForceCalculator;
